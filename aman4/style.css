@@ -1,0 +1,70 @@
+body
+{
+    background-color: rgb(19, 3, 84);
+    
+}
+.take-photo {
+    position: relative;
+    height: 200px;
+    width: 300px;
+    border: 3px solid #157ce4;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+#cameraFeed {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#photoPreview {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.take-photo button {
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.container
+{
+    background-color: rgba(8, 104, 115, 0.761);
+    color: rgba(255, 255, 255, 0.695);
+}
+/* h2{
+    text-align: center;
+    color: black;
+    
+} */
+h2 {
+    text-align: center;
+    background-color: rgba(3, 3, 98, 0.859); /* Change background color to blue */
+    padding: 10px; /* Add padding for better appearance */
+    margin-top: 10px; /* Add margin to separate from other elements */
+    border-radius: 4%;
+}
+
+#submitbtn{
+background-color: rgb(18, 17, 17);
+    margin-bottom: 20px;
+    border-top: 20px;
+    margin-top: 10px;
+}
+#resetbtn
+{
+    background-color: black;
+    margin-bottom: 10px;
+    margin-left: 100px;
+}
+.move
+{
+    text-align: center;
+    margin-right: 90px;
+}

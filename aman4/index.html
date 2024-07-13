@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEC ENTRY FORM</title>
+    <link rel="stylesheet" href="stylenav.css">
+    <style>
+       .slider {
+            width: 10%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider img {
+            width: 100%;
+            display: none;
+        }
+
+        .slider img.active {
+            display: block;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            .slider {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .slider {
+                width: 70%;
+            }
+
+            .slider-btn {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">SEC SASARAM</div>
+            <div class="right">
+                <ul>
+                    <li><a href="http://localhost/aman4/index.php">First Time Entry</a></li>
+                    <li><a href="http://localhost/aman4/relogin.php">Already Entered</a></li>
+                    <li><a href="https://www.scesasaram.in/">About Us</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <header>
+        <main>
+            <section class="firstsection">
+                <div class="leftsection slider">
+                    <div>Welcome,</div> 
+                    <div> I am <span class="color">Aman singh</span></div>
+                    <div>I am a developer </div>
+                    <div>Enter Details Through Qr Code</div>
+                    <span id="element"></span>
+                </div>
+                <div class="rightsection slider">
+                    <!-- Image Slider -->
+                    <img src="picture0.png" alt="loaded" class="active">
+                    <img src="picture3.jpg" alt="Uploaded">
+                    <img src="Picture1.jpg" alt="Uploaded">
+                    <!-- Slider Buttons -->
+                    <span class="slider-btn prev" onclick="prevSlide()">&#10094;</span>
+                    <span class="slider-btn next" onclick="nextSlide()">&#10095;</span>
+                </div>
+            </section>
+            <br>
+            <hr>
+        </main>
+    </header>
+
+    <!-- Typing text ke lyeaa -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['<i>To</i> Digitalize Thing', 'Avoid croud', 'Many Entry at one Time'],
+            typeSpeed: 80,
+            loop:true
+        });
+
+        // Image Slider Logic
+        var slideIndex = 0;
+
+        function showSlides() {
+            var slides = document.querySelectorAll('.slider img');
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every  seconds
+        }
+        showSlides();
+
+        function prevSlide() {
+            slideIndex--;
+            showSlides();
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            showSlides();
+        }
+    </script>
+</body>
+</html>

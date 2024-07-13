@@ -1,0 +1,203 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    background-color: rgb(2, 2, 50);
+    color: white;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: space-between; /* Change to space-between to push items to the ends */
+    align-items: center;
+    height: 50px;
+    background-color: rgb(1, 1, 100);
+}
+
+nav .left, nav .right {
+    flex: 1; /* Equal width for left and right sections */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    justify-content: space-around;
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    margin: 0 10px; /* Adjust spacing between list items */
+}
+
+.left {
+    margin-left: 5%; /* Use a percentage for left margin */
+    font-size: 1.5rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    .left {
+        margin-left: 20px; /* Adjust margin for smaller screens */
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+}
+
+
+a {
+    text-decoration: none;
+    color: rgb(238, 205, 160);
+}
+
+a:hover {
+    font-size: 1.02rem;
+    color: rgb(228, 162, 81);
+}
+
+/* Main hr styles */
+main hr {
+    border: 1;
+    background-color: blue;
+    height: 1px;
+    margin: -10px 84px;
+}
+
+/* First section styles */
+.firstsection {
+    display: flex;
+    justify-content: space-around;
+    margin: 140px 0;
+}
+
+.firstsection > div {
+    width: 35%;
+}
+
+.leftsection {
+    font-size: 3rem;
+    margin: 30px 0;
+}
+
+.rightsection img {
+    width: 100px;
+}
+
+.color {
+    color: rgb(210, 216, 24);
+}
+
+#element {
+    color: rgb(242, 36, 36);
+}
+
+
+/* Main hr styles */
+main hr {
+    border: 1px solid blue; /* Set border style */
+    margin: 60px 84px; /* Set margin */
+}
+
+/* First section styles */
+.firstsection {
+    display: flex;
+    justify-content: space-around;
+    margin: 140px 0;
+}
+
+.leftsection {
+    font-size: 2rem; /* Adjust font size */
+}
+
+.leftsection div, .leftsection span {
+    font-size: 1.5rem; /* Adjust font size */
+    margin-bottom: 10px; /* Adjust spacing between elements */
+}
+
+.color {
+    color: rgb(205, 211, 6);
+}
+
+#element {
+    color: rgb(232, 21, 21);
+}
+
+/* Slider styles */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Set a maximum width for the slider */
+    overflow: hidden;
+    margin: auto; /* Center the slider */
+}
+
+.slider img {
+    width: 100%; /* Make the images fill the width of the slider */
+    display: none;
+}
+
+.slider img.active {
+    display: block;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Change to a column layout for smaller screens */
+        height: auto; /* Auto height for mobile view */
+    }
+    
+    nav .left, nav .right {
+        text-align: center; /* Center align left and right sections */
+        padding: 10px; /* Add padding for better spacing */
+    }
+    
+    nav ul {
+        flex-direction: column; /* Change to a column layout for smaller screens */
+        padding: 10px 0; /* Add padding for better spacing */
+    }
+    
+    nav ul li {
+        margin: 10px 0; /* Adjust spacing between list items */
+    }
+}
+
+/* Media Query for hiding slider buttons between 1000px and 715px */
+@media screen and (max-width: 1000px) and (min-width: 5px) {
+    .slider-btn {
+        display: none; /* Hide slider buttons in this range */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .left {
+        margin-left: 20px; /* Adjust margin for smaller screens */
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+}
+
+
